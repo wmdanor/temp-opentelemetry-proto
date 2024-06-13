@@ -1,6 +1,8 @@
 name: Log
 
 on:
+  push:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -16,3 +18,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: make gen-openapi
+    - run: ls -A ./gen/openapi
