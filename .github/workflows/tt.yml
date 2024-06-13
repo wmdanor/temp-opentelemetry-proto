@@ -18,4 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: make gen-openapi
-    - run: ls -A -R ./gen/openapi
+    - run: ls -A -R ./gen/openapi/
+    - run: cat ./gen/openapi/opentelemetry/proto/collector/trace/v1/trace_service.swagger.json
+    - run: cat ./gen/openapi/opentelemetry/proto/collector/metrics/v1/metrics_service.swagger.json
+    - run: cat ./gen/openapi/opentelemetry/proto/collector/logs/v1/logs_service.swagger.json
