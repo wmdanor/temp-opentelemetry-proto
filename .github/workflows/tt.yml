@@ -1,0 +1,18 @@
+name: Log
+
+on:
+  workflow_dispatch:
+
+jobs:
+  docker-pull:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: make docker-pull
+
+  gen-openapi:
+    needs: docker-pull
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: make gen-openapi
