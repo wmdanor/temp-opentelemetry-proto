@@ -18,4 +18,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: make gen-openapi
-    - run: ls -A ./gen/openapi/opentelemetry
+    - run: ls -A ./gen/openapi/opentelemetry/proto
